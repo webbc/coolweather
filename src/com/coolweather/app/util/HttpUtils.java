@@ -32,9 +32,8 @@ public class HttpUtils {
 					URL url = new URL(address);
 					conn = (HttpURLConnection) url.openConnection();
 					conn.setRequestMethod("GET");
-					conn.setReadTimeout(5000);
-					conn.setConnectTimeout(5000);
-					conn.connect();
+					conn.setReadTimeout(8000);
+					conn.setConnectTimeout(8000);
 					if (conn.getResponseCode() == 200) {
 						InputStream inputStream = conn.getInputStream();
 						BufferedReader br = new BufferedReader(
